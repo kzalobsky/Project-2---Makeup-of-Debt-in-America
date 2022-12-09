@@ -39,9 +39,6 @@ id SERIAL Primary Key,
 select * from Cleaned_loan_df;
 
 
-
-
-
 ------- Rilee's Data
 
 DROP TABLE IF EXISTS renamed_state_debt;
@@ -115,3 +112,6 @@ id SERIAL Primary Key,
 );
 
 SELECT * from balance_by_age_df;
+
+------Joining Tables
+
