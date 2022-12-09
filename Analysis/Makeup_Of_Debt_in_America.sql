@@ -1,9 +1,6 @@
 ------- Nick's Data
 Drop Table If Exists cleaned_debtpenny_df;
 
-
-
-
 Create table cleaned_debtpenny_df(
 id serial primary key,
 "Record Date" VarChar(20),
@@ -12,6 +9,7 @@ id serial primary key,
 "Total Public Debt Outstanding" BigINT,
 "Calendar Quarter Number" INT
 );
+
 Select * from cleaned_debtpenny_df;
 
 DRop Table If Exists Cleaned_household_df;
@@ -115,3 +113,9 @@ SELECT * from balance_by_age_df;
 
 ------Joining Tables
 
+SELECT distinct Cleaned_loan_df."Year", 
+Cleaned_loan_df."Quarter", cleaned_loan_df."Credit Card", cleaned_loan_df."Auto Loan",
+cleaned_loan_df."Mortgage", cleaned_loan_df."HE Revolving"
+FROM cleaned_loan_df
+JOIN debt_balance_and_comp_df
+ON debt_balance_and_comp_df."Year" = cleaned_loan_df."Year"
