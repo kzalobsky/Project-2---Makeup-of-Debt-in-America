@@ -1,3 +1,47 @@
+------- Nick's Data
+Drop Table If Exists cleaned_debtpenny_df;
+
+
+
+
+Create table cleaned_debtpenny_df(
+id serial primary key,
+"Record Date" VarChar(20),
+"Debt Held by the Public" BigINT,
+"Intragovernmental Holdings" BigINT,
+"Total Public Debt Outstanding" BigINT,
+"Calendar Quarter Number" INT
+);
+Select * from cleaned_debtpenny_df;
+
+DRop Table If Exists Cleaned_household_df;
+
+create table Cleaned_household_df(
+"DATE" VarChar(20),
+Household_Debt_to_GDP_ratio REAL
+);
+
+select * from Cleaned_household_df;
+
+Drop Table if exists Cleaned_loan_df;
+
+CREATE TABLE Cleaned_loan_df(
+id SERIAL Primary Key,
+"QUARTERLY DATE" CHAR(5),
+"Year" INT,
+"Quarter" CHAR(2),
+"Auto Loan" REAL,
+"Credit Card" REAL,
+"Mortgage" REAL,
+"HE Revolving" REAL
+);
+
+select * from Cleaned_loan_df;
+
+
+
+
+
 ------- Rilee's Data
 
 DROP TABLE IF EXISTS renamed_state_debt;
